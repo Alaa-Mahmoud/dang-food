@@ -21,7 +21,7 @@ const storeSchema = new mongoose.Schema({
  *if the name is modified 
  ********************************/
 storeSchema.pre('save', function(next) {
-    if (!isModified('name')) {
+    if (!this.isModified('name')) {
         next(); // skip it
         return; // stop this function from running 
     }
