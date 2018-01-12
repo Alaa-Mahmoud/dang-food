@@ -38,6 +38,14 @@ const storeSchema = new mongoose.Schema({
     }
 });
 
+// define our indexes
+
+storeSchema.index({
+    name: 'text',
+    description: 'text',
+});
+
+
 /********************************
  * auto generate slug before save 
  *if the name is modified 

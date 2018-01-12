@@ -47,5 +47,9 @@ router.post('/account/rest/:token',
     catchErrors(AuthController.update)
 );
 
+/* dealing with API  */
+
+router.get('/api/search', catchErrors(StoreController.serachStores));
+
 
 module.exports = router;
