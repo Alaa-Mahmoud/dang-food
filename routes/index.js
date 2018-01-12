@@ -47,9 +47,11 @@ router.post('/account/rest/:token',
     catchErrors(AuthController.update)
 );
 
+router.get('/map', StoreController.mapPage);
+
 /* dealing with API  */
 
 router.get('/api/search', catchErrors(StoreController.serachStores));
-
+router.get('/api/stores/near', catchErrors(StoreController.mapStores));
 
 module.exports = router;

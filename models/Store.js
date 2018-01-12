@@ -45,6 +45,8 @@ storeSchema.index({
     description: 'text',
 });
 
+storeSchema.index({ location: '2dspher' });
+
 
 /********************************
  * auto generate slug before save 
