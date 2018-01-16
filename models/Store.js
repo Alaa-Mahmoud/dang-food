@@ -35,6 +35,11 @@ const storeSchema = new mongoose.Schema({
     photo: {
         type: String,
         required: "Please supply us with photo. "
+    },
+    author: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+        required: 'You must supply an author'
     }
 });
 

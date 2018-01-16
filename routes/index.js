@@ -48,10 +48,11 @@ router.post('/account/rest/:token',
 );
 
 router.get('/map', StoreController.mapPage);
+router.get('/hearts', AuthController.isLoggedIn, catchErrors(StoreController.heartedStore));
 
 /* dealing with API  */
 
 router.get('/api/search', catchErrors(StoreController.serachStores));
 router.get('/api/stores/near', catchErrors(StoreController.mapStores));
-
+router.post('/api/stores/:id/heart', catchErrors(StoreController.heartStore))
 module.exports = router;
