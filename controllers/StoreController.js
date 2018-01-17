@@ -142,4 +142,9 @@ exports.heartedStore = async(req, res) => {
     });
 
     res.render('stores', { title: 'HEARTED STORES', stores });
-}
+};
+
+exports.getTopStores = async(req, res) => {
+    const stores = await Store.getTopStores();
+    res.render('topstores', { title: 'TOP STORES', stores });
+};

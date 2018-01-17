@@ -30,7 +30,7 @@ const userSchema = Schema({
 
 userSchema.virtual('gravatar').get(function() {
     const hash = md5(this.email);
-    return `https://gravatar.com/avatat/${hash}?s=200`;
+    return `https://cdn4.iconfinder.com/data/icons/small-n-flat/24/user-group-512.png?s=200`;
 });
 
 userSchema.plugin(passportLocalMongoose, { usernameField: 'email' });

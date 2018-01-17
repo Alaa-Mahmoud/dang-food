@@ -51,6 +51,8 @@ router.post('/account/rest/:token',
 router.get('/map', StoreController.mapPage);
 router.get('/hearts', AuthController.isLoggedIn, catchErrors(StoreController.heartedStore));
 router.post('/reviews/:id', AuthController.isLoggedIn, catchErrors(ReviewController.addReview));
+router.get('/top', catchErrors(StoreController.getTopStores));
+
 /* dealing with API  */
 
 router.get('/api/search', catchErrors(StoreController.serachStores));

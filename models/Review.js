@@ -35,4 +35,4 @@ function autopopulate(next) {
 reviewSchema.pre('find', autopopulate);
 reviewSchema.pre('findOne', autopopulate);
 
-mongoose.model('Review', reviewSchema);
+module.exports = mongoose.model('Review', reviewSchema);
